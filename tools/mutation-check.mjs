@@ -30,6 +30,15 @@ const MUTANTS = [
   ['threshold fee steps one employee late', 'src/compute.ts', 'const hi = input.users >= x.threshold;', 'const hi = input.users > x.threshold;'],
   ['AI credit quantity ignored', 'src/compute.ts', 'amt: a.price * q', 'amt: a.price'],
   ['a quantity of zero is still charged', 'src/compute.ts', 'if (q === 0) return; // nothing ordered', 'if (false) return; // nothing ordered'],
+  ['a published price book is no longer frozen', 'src/version.ts', 'const frozenBook = deepFreeze(structuredClone(book));', 'const frozenBook = structuredClone(book);'],
+  ['a price book version can be relabelled after the fact', 'src/version.ts', 'return Object.freeze({', 'return ({'],
+  ['deepFreeze stops at the top level', 'src/version.ts', 'deepFreeze((value as Record<string, unknown>)[key]);', 'void key;'],
+  ['two price books may be in force at once', 'src/version.ts', 'this.refuseOverlaps();', ''],
+  ['a price book window includes its end date', 'src/version.ts', 'return v.effectiveTo === null || at < time(v.effectiveTo, v.id);', 'return v.effectiveTo === null || at <= time(v.effectiveTo, v.id);'],
+  ['a quote may be issued from a draft', 'src/issue.ts', "if (version.status !== 'published') {", 'if (false) {'],
+  ['an edited price book goes unnoticed', 'src/issue.ts', 'if (version.fingerprint !== issued.priceBookFingerprint) {', 'if (false) {'],
+  ['a re-render trusts the stored numbers', 'src/issue.ts', 'if (drift.length > 0) {', 'if (false) {'],
+  ['an issued quote keeps a live reference to its input', 'src/issue.ts', 'input: structuredClone(request.input),', 'input: request.input,'],
 ];
 
 const suitePasses = () => {
