@@ -2,7 +2,7 @@
   "name": "assessio-quote-builder",
   "private": true,
   "version": "0.0.0",
-  "description": "Assessio quote builder — monorepo root",
+  "description": "Assessio quote builder \u2014 monorepo root",
   "license": "UNLICENSED",
   "packageManager": "pnpm@10.18.0",
   "engines": {
@@ -14,10 +14,13 @@
     "mutants": "node tools/mutation-check.mjs",
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck",
-    "verify": "pnpm typecheck && pnpm test"
+    "verify": "pnpm typecheck && pnpm test",
+    "zuora:template": "tsx tools/zuora-template.ts",
+    "zuora:check": "tsx tools/zuora-template.ts --check"
   },
   "devDependencies": {
     "playwright": "1.63.0",
+    "tsx": "4.20.6",
     "typescript": "5.9.3"
   }
 }

@@ -1,5 +1,17 @@
 export { computeQuote } from './compute.js';
 export {
+  assertBillable,
+  billingReadiness,
+  catalogCharges,
+  CHARGE_MODEL,
+  chargeTemplateCsv,
+  parseMappingCsv,
+} from './catalog.js';
+export { parseCsv, parseCsvRecords, toCsv } from './csv.js';
+export { canonicalJson, fingerprint } from './fingerprint.js';
+export { divergences, issueQuote, rerenderQuote } from './issue.js';
+export { createVersion, PriceBookRegistry } from './version.js';
+export {
   bandTotal,
   countingTiers,
   coveredBySuite,
@@ -14,6 +26,9 @@ export {
   selectedPackOf,
   suiteCovers,
 } from './engine.js';
+export type { BillingReadiness, CatalogCharge, CatalogLink, ChargeKind, ZuoraMapping } from './catalog.js';
+export type { Divergence, IssuedQuote, IssueRequest } from './issue.js';
+export type { PriceBookStatus, PriceBookVersion, PriceBookVersionInput } from './version.js';
 export type {
   AiCredit,
   Band,

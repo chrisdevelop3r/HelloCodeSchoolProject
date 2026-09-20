@@ -30,6 +30,22 @@ const MUTANTS = [
   ['threshold fee steps one employee late', 'src/compute.ts', 'const hi = input.users >= x.threshold;', 'const hi = input.users > x.threshold;'],
   ['AI credit quantity ignored', 'src/compute.ts', 'amt: a.price * q', 'amt: a.price'],
   ['a quantity of zero is still charged', 'src/compute.ts', 'if (q === 0) return; // nothing ordered', 'if (false) return; // nothing ordered'],
+  ['a published price book is no longer frozen', 'src/version.ts', 'const frozenBook = deepFreeze(structuredClone(book));', 'const frozenBook = structuredClone(book);'],
+  ['a price book version can be relabelled after the fact', 'src/version.ts', 'return Object.freeze({', 'return ({'],
+  ['deepFreeze stops at the top level', 'src/version.ts', 'deepFreeze((value as Record<string, unknown>)[key]);', 'void key;'],
+  ['two price books may be in force at once', 'src/version.ts', 'this.refuseOverlaps();', ''],
+  ['a price book window includes its end date', 'src/version.ts', 'return v.effectiveTo === null || at < time(v.effectiveTo, v.id);', 'return v.effectiveTo === null || at <= time(v.effectiveTo, v.id);'],
+  ['a quote may be issued from a draft', 'src/issue.ts', "if (version.status !== 'published') {", 'if (false) {'],
+  ['an edited price book goes unnoticed', 'src/issue.ts', 'if (version.fingerprint !== issued.priceBookFingerprint) {', 'if (false) {'],
+  ['a re-render trusts the stored numbers', 'src/issue.ts', 'if (drift.length > 0) {', 'if (false) {'],
+  ['an issued quote keeps a live reference to its input', 'src/issue.ts', 'input: structuredClone(request.input),', 'input: request.input,'],
+  ['a half-filled mapping row counts as billable', 'src/catalog.ts', 'if (m && m.productRatePlanId && m.productRatePlanChargeId) mapped.push(charge);', 'if (m) mapped.push(charge);'],
+  ['a recurring set-up fee is billed as one-time', 'src/catalog.ts', "kind: fee.recurring ? 'recurring-service' : 'one-time',", "kind: 'one-time',"],
+  ['predictive hiring gets the employee-tiered charge model', 'src/catalog.ts', 'zuoraChargeModel: pack.bandModel ? CHARGE_MODEL.banded : CHARGE_MODEL.tiered,', 'zuoraChargeModel: CHARGE_MODEL.tiered,'],
+  ['a mapping left behind by a deleted charge is ignored', 'src/catalog.ts', 'billable: unmapped.length === 0 && orphaned.length === 0,', 'billable: unmapped.length === 0,'],
+  ['one charge may be mapped to two Zuora charges', 'src/catalog.ts', 'if (seen.has(m.key)) throw new Error(`The mapping CSV maps ${m.key} twice.`);', 'void 0;'],
+  ['CSV fields are never quoted', 'src/csv.ts', 'NEEDS_QUOTING.test(f) ? `"${f.replace(/"/g, \'""\')}"` : f', 'f'],
+  ['a doubled quote ends a CSV field', 'src/csv.ts', "} else if (text[i + 1] === '\"') {", '} else if (false) {'],
 ];
 
 const suitePasses = () => {
