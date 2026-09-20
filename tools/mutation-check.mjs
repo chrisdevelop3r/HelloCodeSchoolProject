@@ -39,6 +39,13 @@ const MUTANTS = [
   ['an edited price book goes unnoticed', 'src/issue.ts', 'if (version.fingerprint !== issued.priceBookFingerprint) {', 'if (false) {'],
   ['a re-render trusts the stored numbers', 'src/issue.ts', 'if (drift.length > 0) {', 'if (false) {'],
   ['an issued quote keeps a live reference to its input', 'src/issue.ts', 'input: structuredClone(request.input),', 'input: request.input,'],
+  ['a half-filled mapping row counts as billable', 'src/catalog.ts', 'if (m && m.productRatePlanId && m.productRatePlanChargeId) mapped.push(charge);', 'if (m) mapped.push(charge);'],
+  ['a recurring set-up fee is billed as one-time', 'src/catalog.ts', "kind: fee.recurring ? 'recurring-service' : 'one-time',", "kind: 'one-time',"],
+  ['predictive hiring gets the employee-tiered charge model', 'src/catalog.ts', 'zuoraChargeModel: pack.bandModel ? CHARGE_MODEL.banded : CHARGE_MODEL.tiered,', 'zuoraChargeModel: CHARGE_MODEL.tiered,'],
+  ['a mapping left behind by a deleted charge is ignored', 'src/catalog.ts', 'billable: unmapped.length === 0 && orphaned.length === 0,', 'billable: unmapped.length === 0,'],
+  ['one charge may be mapped to two Zuora charges', 'src/catalog.ts', 'if (seen.has(m.key)) throw new Error(`The mapping CSV maps ${m.key} twice.`);', 'void 0;'],
+  ['CSV fields are never quoted', 'src/csv.ts', 'NEEDS_QUOTING.test(f) ? `"${f.replace(/"/g, \'""\')}"` : f', 'f'],
+  ['a doubled quote ends a CSV field', 'src/csv.ts', "} else if (text[i + 1] === '\"') {", '} else if (false) {'],
 ];
 
 const suitePasses = () => {

@@ -16,7 +16,9 @@ TypeScript library with the prototype as its acceptance test.
 | `packages/pricing/test/fixtures/` | The answers. Generated; never hand-edited. |
 | `packages/pricing/data/price-book.v137.json` | v137's `SEED`, captured verbatim. Data, not source. |
 | `packages/pricing/src/` | The engine, ported. Pure: no DOM, no I/O, no globals. |
-| `tools/mutation-check.mjs` | Ten deliberate breakages the suite must catch. |
+| `tools/mutation-check.mjs` | Deliberate breakages the suite must catch. |
+| `tools/zuora-template.ts` | Generates the list of charges Zuora is missing. |
+| `packages/pricing/data/zuora-mapping.v137.csv` | The handoff spreadsheet. Generated; the Zuora columns are filled in by hand. |
 
 ## Running it
 
@@ -29,6 +31,8 @@ pnpm typecheck
 pnpm capture         # re-capture fixtures from the prototype
 pnpm capture:check   # fail if any fixture has drifted (CI runs this)
 pnpm mutants         # prove the suite still discriminates
+pnpm zuora:template  # regenerate the Zuora worklist
+pnpm zuora:check     # fail if the worklist has drifted (CI runs this)
 pnpm verify          # typecheck + test
 ```
 
@@ -86,15 +90,22 @@ reaches: recurring fees inside the set-up list, and a usage ladder on a module
 that is not predictive hiring. Both are covered by scenarios that supply a price
 book with those shapes, captured from the prototype in the same way.
 
+## Versioning and billing
+
+Two documents cover what was built on top of the engine:
+
+- `docs/price-book-versions.md` — versioned price books, and how an issued quote
+  re-renders unchanged after the book has moved on.
+- `docs/zuora-charges-required.md` — the charges Zuora does not have yet.
+  Generated; it is the worklist for building the new pricing in the billing
+  system.
+
 ## What is not here yet
 
-Phase 1 is the library. Still to come, in the architecture doc's order:
-
-- the price book as versioned rows with an effective date, not a single JSON
-  file — a quote issued in March must re-render identically in November;
-- money as integer minor units with a documented rounding point, so a quote
-  cannot disagree with the Zuora invoice by an öre;
-- Zod schemas, so a price book is validated before it can price anything;
-- Phase 2, the builder UI.
-
-The first two are the ones that matter before anything is issued to a customer.
+- **Money as integer minor units** with a documented rounding point, so a quote
+  cannot disagree with the Zuora invoice by an öre. This will change numbers, so
+  it needs a decision recorded before it needs a commit.
+- **Zod schemas**, so a price book is validated before it can price anything.
+  `test/defensive.test.ts` pins down what happens today when a malformed one
+  gets through.
+- **Phase 2, the builder UI.**

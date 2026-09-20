@@ -10,10 +10,10 @@ export default defineConfig({
       // types.ts is erased at build time — there is nothing there to execute.
       exclude: ['src/types.ts'],
       // The engine is the institutional asset. It is covered or it does not ship.
-      // Calibrated to what the suite actually reaches (100/96.4/100/100), with
+      // Calibrated to what the suite actually reaches (100/97.2/100/100), with
       // a little headroom. Raise it when coverage rises; never lower it to get
       // a red build green.
-      thresholds: { statements: 100, branches: 95, functions: 100, lines: 100 },
+      thresholds: { statements: 100, branches: 96, functions: 100, lines: 100 },
     },
   },
 });
