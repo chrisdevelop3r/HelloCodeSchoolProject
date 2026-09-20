@@ -1,16 +1,23 @@
 {
-  "name": "hello-codeschool-project",
-  "version": "1.0.0",
-  "description": "Sample Code School Project",
-  "main": "index.js",
-  "scripts": {
-    "test": "./node_modules/.bin/mocha test/"
+  "name": "assessio-quote-builder",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Assessio quote builder — monorepo root",
+  "license": "UNLICENSED",
+  "packageManager": "pnpm@10.18.0",
+  "engines": {
+    "node": ">=22"
   },
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "capture": "node tools/capture-fixtures.mjs",
+    "capture:check": "node tools/capture-fixtures.mjs --check",
+    "mutants": "node tools/mutation-check.mjs",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "verify": "pnpm typecheck && pnpm test"
+  },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "jsdom": "^9.2.1",
-    "mocha": "^2.5.3"
+    "playwright": "1.63.0",
+    "typescript": "5.9.3"
   }
 }

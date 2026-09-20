@@ -1,0 +1,124 @@
+{
+  "name": "setup-fees-quantity",
+  "description": "Quantity-priced fees, including the consultancy step of 10",
+  "priceBook": "v137",
+  "overrides": {},
+  "input": {
+    "name": "Acme Inc",
+    "years": 1,
+    "users": 600,
+    "processes": 14,
+    "packs": {
+      "ph_s": true
+    },
+    "setup": {
+      "cert": true,
+      "cert_q": 3,
+      "consult": true,
+      "consult_q": 20,
+      "mgr_ws": true,
+      "mgr_ws_q": 2
+    },
+    "yearly": {},
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 0,
+    "reason": ""
+  },
+  "expected": {
+    "users": 600,
+    "segId": "value",
+    "segMult": 1,
+    "suiteOn": false,
+    "packCount": 1,
+    "notCounted": [],
+    "listSub": 6925.709219858157,
+    "packPct": 0,
+    "packAmt": 0,
+    "engPct": 0,
+    "engAmt": 0,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 6925.709219858157,
+    "totalPct": 0,
+    "additive": true,
+    "rawFactor": 1,
+    "effPct": 0,
+    "subLines": [
+      {
+        "modId": "ph",
+        "packId": "ph_s",
+        "qty": 600,
+        "unit": 11.542848699763594,
+        "annual": 6925.709219858157,
+        "raw": 6925.709219858157,
+        "perEmp": 11.542848699763594,
+        "net": 6925.709219858157,
+        "hasUsage": true,
+        "usageQty": 14,
+        "usageTot": 6925.709219858157,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 0,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "part": "usage",
+            "from": 1,
+            "to": 10,
+            "n": 10,
+            "flat": 5377.127659574468,
+            "amt": 5377.127659574468
+          },
+          {
+            "part": "usage",
+            "from": 11,
+            "to": 20,
+            "n": 4,
+            "r": 387.154255319149,
+            "amt": 1548.617021276596
+          }
+        ]
+      }
+    ],
+    "yLines": [],
+    "yearlyTot": 0,
+    "oLines": [
+      {
+        "name": "Assessor certification",
+        "amt": 2700,
+        "note": "3 seats",
+        "unit": "seat",
+        "qty": 3,
+        "unitPrice": 900
+      },
+      {
+        "name": "Manager workshop",
+        "amt": 3600,
+        "note": "2 sessions",
+        "unit": "session",
+        "qty": 2,
+        "unitPrice": 1800
+      },
+      {
+        "name": "Consultancy",
+        "amt": 3800,
+        "note": "20 hours",
+        "unit": "hour",
+        "qty": 20,
+        "unitPrice": 190
+      }
+    ],
+    "setupGross": 10100,
+    "setupDiscPct": 0,
+    "setupDiscAmt": 0,
+    "oneTime": 10100,
+    "arr": 6925.709219858157,
+    "mrr": 577.1424349881797,
+    "year1": 17025.709219858156,
+    "tcv": 17025.709219858156,
+    "perUser": 11.542848699763594
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "name": "usage-ladder-outside-the-band-model",
+  "description": "A module charged on employees and on a usage metric, both as plain ladders",
+  "priceBook": "v137",
+  "overrides": {
+    "modules": [
+      {
+        "id": "usage",
+        "name": "Usage-metered module",
+        "packs": [
+          {
+            "id": "usage_1",
+            "name": "Usage-metered module Pro",
+            "bands": [
+              {
+                "to": 100,
+                "flat": 2000
+              },
+              {
+                "to": 1000,
+                "rate": 12
+              },
+              {
+                "to": null,
+                "rate": 4
+              }
+            ],
+            "usage": {
+              "unit": "assessment",
+              "bands": [
+                {
+                  "to": 50,
+                  "flat": 1500
+                },
+                {
+                  "to": null,
+                  "rate": 25
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "input": {
+    "name": "Acme Inc",
+    "years": 1,
+    "users": 800,
+    "processes": 120,
+    "packs": {
+      "usage_1": true
+    },
+    "setup": {},
+    "yearly": {},
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 0,
+    "reason": ""
+  },
+  "expected": {
+    "users": 800,
+    "segId": "value",
+    "segMult": 1,
+    "suiteOn": false,
+    "packCount": 1,
+    "notCounted": [],
+    "listSub": 13650,
+    "packPct": 0,
+    "packAmt": 0,
+    "engPct": 0,
+    "engAmt": 0,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 13650,
+    "totalPct": 0,
+    "additive": true,
+    "rawFactor": 1,
+    "effPct": 0,
+    "subLines": [
+      {
+        "modId": "usage",
+        "packId": "usage_1",
+        "qty": 800,
+        "unit": 17.0625,
+        "annual": 13650,
+        "raw": 13650,
+        "perEmp": 17.06,
+        "net": 13650,
+        "hasUsage": true,
+        "usageQty": 120,
+        "usageTot": 3250,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 10400,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "to": 100,
+            "n": 100,
+            "flat": 2000,
+            "amt": 2000,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 101,
+            "to": 1000,
+            "n": 700,
+            "r": 12,
+            "amt": 8400,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "to": 50,
+            "n": 50,
+            "flat": 1500,
+            "amt": 1500,
+            "part": "usage",
+            "unit": "assessment"
+          },
+          {
+            "from": 51,
+            "to": null,
+            "n": 70,
+            "r": 25,
+            "amt": 1750,
+            "part": "usage",
+            "unit": "assessment"
+          }
+        ]
+      }
+    ],
+    "yLines": [],
+    "yearlyTot": 0,
+    "oLines": [],
+    "setupGross": 0,
+    "setupDiscPct": 0,
+    "setupDiscAmt": 0,
+    "oneTime": 0,
+    "arr": 13650,
+    "mrr": 1137.5,
+    "year1": 13650,
+    "tcv": 13650,
+    "perUser": 17.0625
+  }
+}

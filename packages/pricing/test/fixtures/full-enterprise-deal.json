@@ -1,0 +1,197 @@
+{
+  "name": "full-enterprise-deal",
+  "description": "Enterprise suite, three years, services, credits and a negotiated discount",
+  "priceBook": "v137",
+  "overrides": {},
+  "input": {
+    "name": "Acme Inc",
+    "years": 3,
+    "users": 3200,
+    "processes": 180,
+    "packs": {
+      "suite_p": true
+    },
+    "setup": {
+      "onb_ent": true,
+      "ats": true,
+      "integ": true,
+      "integ_q": 2,
+      "cert": true,
+      "cert_q": 5,
+      "consult": true,
+      "consult_q": 40
+    },
+    "yearly": {
+      "academy": true,
+      "academy_q": 10,
+      "csm": true,
+      "support": true,
+      "maint": true
+    },
+    "ai": {
+      "ai_50": 2
+    },
+    "disc": 12,
+    "setupDisc": 50,
+    "reason": ""
+  },
+  "expected": {
+    "users": 3200,
+    "segId": "ent",
+    "segMult": 1,
+    "suiteOn": true,
+    "packCount": 1,
+    "notCounted": [],
+    "listSub": 136629.49115744678,
+    "packPct": 0,
+    "packAmt": 0,
+    "engPct": 8,
+    "engAmt": 10930.359292595742,
+    "discPct": 12,
+    "discAmt": 16395.538938893616,
+    "netSub": 109303.59292595743,
+    "totalPct": 20,
+    "additive": true,
+    "rawFactor": 0.8,
+    "effPct": 19.999999999999996,
+    "subLines": [
+      {
+        "modId": "suite",
+        "packId": "suite_p",
+        "qty": 3200,
+        "unit": 42.69671598670212,
+        "annual": 136629.49115744678,
+        "raw": 189763.18216312054,
+        "perEmp": 42.69671598670212,
+        "net": 109303.59292595743,
+        "hasUsage": true,
+        "usageQty": 180,
+        "usageTot": 51296.89716312057,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 138466.28499999997,
+        "suiteParts": 189763.18216312054,
+        "suiteDisc": 20,
+        "suiteBonus": 10,
+        "legs": [
+          {
+            "suiteMember": "Predictive hiring Pro",
+            "amt": 51296.89716312057,
+            "part": "usage"
+          },
+          {
+            "suiteMember": "Talent assessment Pro",
+            "amt": 27339.915,
+            "part": "platform"
+          },
+          {
+            "suiteMember": "Performance Pro",
+            "amt": 54130.995,
+            "part": "platform"
+          },
+          {
+            "suiteMember": "Development Pro",
+            "amt": 31300.149999999998,
+            "part": "platform"
+          },
+          {
+            "suiteMember": "Engagement Pro",
+            "amt": 8565.145,
+            "part": "platform"
+          },
+          {
+            "suiteMember": "Compensation Pro",
+            "amt": 17130.08,
+            "part": "platform"
+          }
+        ]
+      }
+    ],
+    "yLines": [
+      {
+        "name": "E-learning academy",
+        "amt": 250,
+        "note": "10 seats",
+        "auto": false,
+        "qty": 10,
+        "unitPrice": 25
+      },
+      {
+        "name": "Named customer success manager",
+        "amt": 6000,
+        "note": "",
+        "auto": false,
+        "qty": null,
+        "unitPrice": 6000
+      },
+      {
+        "name": "Premium support",
+        "amt": 3000,
+        "note": "",
+        "auto": false,
+        "qty": null,
+        "unitPrice": 3000
+      },
+      {
+        "name": "Integration maintenance",
+        "amt": 1200,
+        "note": "",
+        "auto": true,
+        "qty": null,
+        "unitPrice": 1200
+      }
+    ],
+    "yearlyTot": 10450,
+    "oLines": [
+      {
+        "name": "Enterprise implementation",
+        "amt": 12000,
+        "note": "",
+        "unit": null,
+        "qty": null,
+        "unitPrice": 12000
+      },
+      {
+        "name": "Assessor certification",
+        "amt": 4500,
+        "note": "5 seats",
+        "unit": "seat",
+        "qty": 5,
+        "unitPrice": 900
+      },
+      {
+        "name": "Consultancy",
+        "amt": 7600,
+        "note": "40 hours",
+        "unit": "hour",
+        "qty": 40,
+        "unitPrice": 190
+      },
+      {
+        "name": "Integration",
+        "amt": 5000,
+        "note": "2 systems",
+        "unit": "system",
+        "qty": 2,
+        "unitPrice": 2500
+      },
+      {
+        "name": "50 000 extra AI credits",
+        "amt": 20000,
+        "note": "2 ×",
+        "unit": null,
+        "qty": null,
+        "unitPrice": null
+      }
+    ],
+    "setupGross": 49100,
+    "setupDiscPct": 50,
+    "setupDiscAmt": 24550,
+    "oneTime": 24550,
+    "arr": 119753.59292595743,
+    "mrr": 9979.466077163119,
+    "year1": 144303.59292595743,
+    "tcv": 383810.7787778723,
+    "perUser": 37.422997789361695
+  }
+}

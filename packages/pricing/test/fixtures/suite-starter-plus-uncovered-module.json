@@ -1,0 +1,107 @@
+{
+  "name": "suite-starter-plus-uncovered-module",
+  "description": "A module outside the suite is charged on top",
+  "priceBook": "v137",
+  "overrides": {},
+  "input": {
+    "name": "Acme Inc",
+    "years": 1,
+    "users": 600,
+    "processes": 14,
+    "packs": {
+      "suite_s": true,
+      "dev_ss": true
+    },
+    "setup": {},
+    "yearly": {},
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 0,
+    "reason": ""
+  },
+  "expected": {
+    "users": 600,
+    "segId": "value",
+    "segMult": 1,
+    "suiteOn": true,
+    "packCount": 1,
+    "notCounted": [],
+    "listSub": 44113.89543829787,
+    "packPct": 0,
+    "packAmt": 0,
+    "engPct": 0,
+    "engAmt": 0,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 44113.89543829787,
+    "totalPct": 0,
+    "additive": true,
+    "rawFactor": 1,
+    "effPct": 0,
+    "subLines": [
+      {
+        "modId": "suite",
+        "packId": "suite_s",
+        "qty": 600,
+        "unit": 73.52315906382978,
+        "annual": 44113.89543829787,
+        "raw": 61269.29921985815,
+        "perEmp": 73.52315906382978,
+        "net": 44113.89543829787,
+        "hasUsage": true,
+        "usageQty": 14,
+        "usageTot": 6925.709219858157,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 54343.58999999999,
+        "suiteParts": 61269.29921985815,
+        "suiteDisc": 20,
+        "suiteBonus": 10,
+        "legs": [
+          {
+            "suiteMember": "Predictive hiring Starter",
+            "amt": 6925.709219858157,
+            "part": "usage"
+          },
+          {
+            "suiteMember": "Talent assessment Pro",
+            "amt": 14904.955000000002,
+            "part": "platform"
+          },
+          {
+            "suiteMember": "Performance Starter",
+            "amt": 18711,
+            "part": "platform"
+          },
+          {
+            "suiteMember": "Development Starter Training",
+            "amt": 12162.155,
+            "part": "platform"
+          },
+          {
+            "suiteMember": "Engagement Starter",
+            "amt": 1496.88,
+            "part": "platform"
+          },
+          {
+            "suiteMember": "Compensation Starter",
+            "amt": 7068.6,
+            "part": "platform"
+          }
+        ]
+      }
+    ],
+    "yLines": [],
+    "yearlyTot": 0,
+    "oLines": [],
+    "setupGross": 0,
+    "setupDiscPct": 0,
+    "setupDiscAmt": 0,
+    "oneTime": 0,
+    "arr": 44113.89543829787,
+    "mrr": 3676.157953191489,
+    "year1": 44113.89543829787,
+    "tcv": 44113.89543829787,
+    "perUser": 73.52315906382978
+  }
+}

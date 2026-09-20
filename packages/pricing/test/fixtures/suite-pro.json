@@ -1,0 +1,106 @@
+{
+  "name": "suite-pro",
+  "description": "Full Suite Pro — the Pro members of every module",
+  "priceBook": "v137",
+  "overrides": {},
+  "input": {
+    "name": "Acme Inc",
+    "years": 1,
+    "users": 600,
+    "processes": 14,
+    "packs": {
+      "suite_p": true
+    },
+    "setup": {},
+    "yearly": {},
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 0,
+    "reason": ""
+  },
+  "expected": {
+    "users": 600,
+    "segId": "value",
+    "segMult": 1,
+    "suiteOn": true,
+    "packCount": 1,
+    "notCounted": [],
+    "listSub": 59116.21503829786,
+    "packPct": 0,
+    "packAmt": 0,
+    "engPct": 0,
+    "engAmt": 0,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 59116.21503829786,
+    "totalPct": 0,
+    "additive": true,
+    "rawFactor": 1,
+    "effPct": 0,
+    "subLines": [
+      {
+        "modId": "suite",
+        "packId": "suite_p",
+        "qty": 600,
+        "unit": 98.52702506382977,
+        "annual": 59116.21503829786,
+        "raw": 82105.85421985814,
+        "perEmp": 98.52702506382977,
+        "net": 59116.21503829786,
+        "hasUsage": true,
+        "usageQty": 14,
+        "usageTot": 6925.709219858157,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 75180.14499999999,
+        "suiteParts": 82105.85421985814,
+        "suiteDisc": 20,
+        "suiteBonus": 10,
+        "legs": [
+          {
+            "suiteMember": "Predictive hiring Pro",
+            "amt": 6925.709219858157,
+            "part": "usage"
+          },
+          {
+            "suiteMember": "Talent assessment Pro",
+            "amt": 14904.955000000002,
+            "part": "platform"
+          },
+          {
+            "suiteMember": "Performance Pro",
+            "amt": 29563.375,
+            "part": "platform"
+          },
+          {
+            "suiteMember": "Development Pro",
+            "amt": 17094.37,
+            "part": "platform"
+          },
+          {
+            "suiteMember": "Engagement Pro",
+            "amt": 4677.745,
+            "part": "platform"
+          },
+          {
+            "suiteMember": "Compensation Pro",
+            "amt": 8939.7,
+            "part": "platform"
+          }
+        ]
+      }
+    ],
+    "yLines": [],
+    "yearlyTot": 0,
+    "oLines": [],
+    "setupGross": 0,
+    "setupDiscPct": 0,
+    "setupDiscAmt": 0,
+    "oneTime": 0,
+    "arr": 59116.21503829786,
+    "mrr": 4926.3512531914885,
+    "year1": 59116.21503829786,
+    "tcv": 59116.21503829786,
+    "perUser": 98.52702506382977
+  }
+}
