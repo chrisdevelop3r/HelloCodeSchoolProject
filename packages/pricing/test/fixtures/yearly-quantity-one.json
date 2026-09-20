@@ -1,0 +1,123 @@
+{
+  "name": "yearly-quantity-one",
+  "description": "A quantity of one is not pluralised",
+  "priceBook": "v137",
+  "overrides": {},
+  "input": {
+    "name": "Acme Inc",
+    "years": 1,
+    "users": 600,
+    "processes": 14,
+    "packs": {
+      "ta_1": true
+    },
+    "setup": {},
+    "yearly": {
+      "academy": true,
+      "academy_q": 1
+    },
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 0,
+    "reason": ""
+  },
+  "expected": {
+    "users": 600,
+    "segId": "value",
+    "segMult": 1,
+    "suiteOn": false,
+    "packCount": 1,
+    "notCounted": [],
+    "listSub": 14904,
+    "packPct": 0,
+    "packAmt": 0,
+    "engPct": 0,
+    "engAmt": 0,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 14904,
+    "totalPct": 0,
+    "additive": true,
+    "rawFactor": 1,
+    "effPct": 0,
+    "subLines": [
+      {
+        "modId": "ta",
+        "packId": "ta_1",
+        "qty": 600,
+        "unit": 24.84,
+        "annual": 14904,
+        "raw": 14904.955000000002,
+        "perEmp": 24.84,
+        "net": 14904,
+        "hasUsage": false,
+        "usageQty": 0,
+        "usageTot": 0,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 14904.955000000002,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "to": 100,
+            "n": 100,
+            "flat": 3300.33,
+            "amt": 3300.33,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 101,
+            "to": 250,
+            "n": 150,
+            "r": 38.3206,
+            "amt": 5748.09,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 251,
+            "to": 500,
+            "n": 250,
+            "r": 18.9917,
+            "amt": 4747.925,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 501,
+            "to": 1000,
+            "n": 100,
+            "r": 11.0861,
+            "amt": 1108.61,
+            "part": "platform",
+            "unit": "employee"
+          }
+        ]
+      }
+    ],
+    "yLines": [
+      {
+        "name": "E-learning academy",
+        "amt": 25,
+        "note": "1 seat",
+        "auto": false,
+        "qty": 1,
+        "unitPrice": 25
+      }
+    ],
+    "yearlyTot": 25,
+    "oLines": [],
+    "setupGross": 0,
+    "setupDiscPct": 0,
+    "setupDiscAmt": 0,
+    "oneTime": 0,
+    "arr": 14929,
+    "mrr": 1244.0833333333333,
+    "year1": 14929,
+    "tcv": 14929,
+    "perUser": 24.881666666666668
+  }
+}

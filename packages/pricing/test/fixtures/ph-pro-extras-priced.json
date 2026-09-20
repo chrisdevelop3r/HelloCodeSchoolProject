@@ -1,0 +1,148 @@
+{
+  "name": "ph-pro-extras-priced",
+  "description": "Pro extras once Finance has put numbers on them",
+  "priceBook": "v137",
+  "overrides": {
+    "phPro": [
+      {
+        "id": "lense",
+        "name": "Personal Lense",
+        "pct": 5,
+        "flatSEK": 0
+      },
+      {
+        "id": "lensmkr",
+        "name": "AI Lens Maker",
+        "pct": 0,
+        "flatSEK": 25000
+      },
+      {
+        "id": "insight",
+        "name": "Extremes & Learning agility",
+        "pct": 2.5,
+        "flatSEK": 10000
+      }
+    ]
+  },
+  "input": {
+    "name": "Acme Inc",
+    "years": 1,
+    "users": 2000,
+    "processes": 40,
+    "packs": {
+      "ph_p": true
+    },
+    "setup": {},
+    "yearly": {},
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 0,
+    "reason": ""
+  },
+  "expected": {
+    "users": 2000,
+    "segId": "star",
+    "segMult": 1,
+    "suiteOn": false,
+    "packCount": 1,
+    "notCounted": [],
+    "listSub": 20203.62810283688,
+    "packPct": 0,
+    "packAmt": 0,
+    "engPct": 0,
+    "engAmt": 0,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 20203.62810283688,
+    "totalPct": 0,
+    "additive": true,
+    "rawFactor": 1,
+    "effPct": 0,
+    "subLines": [
+      {
+        "modId": "ph",
+        "packId": "ph_p",
+        "qty": 2000,
+        "unit": 10.10181405141844,
+        "annual": 20203.62810283688,
+        "raw": 20203.62810283688,
+        "perEmp": 10.10181405141844,
+        "net": 20203.62810283688,
+        "hasUsage": true,
+        "usageQty": 40,
+        "usageTot": 15907.712765957447,
+        "sizeTot": 0,
+        "proTot": 4295.915336879432,
+        "platformTot": 0,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "part": "usage",
+            "from": 1,
+            "to": 10,
+            "n": 10,
+            "flat": 5377.127659574468,
+            "amt": 5377.127659574468
+          },
+          {
+            "part": "usage",
+            "from": 11,
+            "to": 20,
+            "n": 10,
+            "r": 387.154255319149,
+            "amt": 3871.54255319149
+          },
+          {
+            "part": "usage",
+            "from": 21,
+            "to": 40,
+            "n": 20,
+            "r": 332.95212765957444,
+            "amt": 6659.04255319149
+          },
+          {
+            "part": "pro",
+            "n": 1,
+            "r": 795.3856382978723,
+            "amt": 795.3856382978723,
+            "label": "Personal Lense",
+            "pct": 5,
+            "flatSEK": 0
+          },
+          {
+            "part": "pro",
+            "n": 1,
+            "r": 2216.3120567375886,
+            "amt": 2216.3120567375886,
+            "label": "AI Lens Maker",
+            "pct": 0,
+            "flatSEK": 25000
+          },
+          {
+            "part": "pro",
+            "n": 1,
+            "r": 1284.2176418439717,
+            "amt": 1284.2176418439717,
+            "label": "Extremes & Learning agility",
+            "pct": 2.5,
+            "flatSEK": 10000
+          }
+        ]
+      }
+    ],
+    "yLines": [],
+    "yearlyTot": 0,
+    "oLines": [],
+    "setupGross": 0,
+    "setupDiscPct": 0,
+    "setupDiscAmt": 0,
+    "oneTime": 0,
+    "arr": 20203.62810283688,
+    "mrr": 1683.6356752364065,
+    "year1": 20203.62810283688,
+    "tcv": 20203.62810283688,
+    "perUser": 10.10181405141844
+  }
+}

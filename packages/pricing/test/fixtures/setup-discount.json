@@ -1,0 +1,131 @@
+{
+  "name": "setup-discount",
+  "description": "A discount on the one-time fees only",
+  "priceBook": "v137",
+  "overrides": {},
+  "input": {
+    "name": "Acme Inc",
+    "years": 1,
+    "users": 600,
+    "processes": 14,
+    "packs": {
+      "ta_1": true
+    },
+    "setup": {
+      "onb_std": true,
+      "migrate": true
+    },
+    "yearly": {},
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 25,
+    "reason": ""
+  },
+  "expected": {
+    "users": 600,
+    "segId": "value",
+    "segMult": 1,
+    "suiteOn": false,
+    "packCount": 1,
+    "notCounted": [],
+    "listSub": 14904,
+    "packPct": 0,
+    "packAmt": 0,
+    "engPct": 0,
+    "engAmt": 0,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 14904,
+    "totalPct": 0,
+    "additive": true,
+    "rawFactor": 1,
+    "effPct": 0,
+    "subLines": [
+      {
+        "modId": "ta",
+        "packId": "ta_1",
+        "qty": 600,
+        "unit": 24.84,
+        "annual": 14904,
+        "raw": 14904.955000000002,
+        "perEmp": 24.84,
+        "net": 14904,
+        "hasUsage": false,
+        "usageQty": 0,
+        "usageTot": 0,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 14904.955000000002,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "to": 100,
+            "n": 100,
+            "flat": 3300.33,
+            "amt": 3300.33,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 101,
+            "to": 250,
+            "n": 150,
+            "r": 38.3206,
+            "amt": 5748.09,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 251,
+            "to": 500,
+            "n": 250,
+            "r": 18.9917,
+            "amt": 4747.925,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 501,
+            "to": 1000,
+            "n": 100,
+            "r": 11.0861,
+            "amt": 1108.61,
+            "part": "platform",
+            "unit": "employee"
+          }
+        ]
+      }
+    ],
+    "yLines": [],
+    "yearlyTot": 0,
+    "oLines": [
+      {
+        "name": "Onboarding & implementation",
+        "amt": 3500,
+        "note": "",
+        "unit": null,
+        "qty": null,
+        "unitPrice": 3500
+      },
+      {
+        "name": "Data migration",
+        "amt": 2500,
+        "note": "",
+        "unit": null,
+        "qty": null,
+        "unitPrice": 2500
+      }
+    ],
+    "setupGross": 6000,
+    "setupDiscPct": 25,
+    "setupDiscAmt": 1500,
+    "oneTime": 4500,
+    "arr": 14904,
+    "mrr": 1242,
+    "year1": 19404,
+    "tcv": 19404,
+    "perUser": 24.84
+  }
+}

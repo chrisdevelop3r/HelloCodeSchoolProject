@@ -1,0 +1,114 @@
+{
+  "name": "ph-size-fade",
+  "description": "Size charge fading out as committed recruitments approach full depth",
+  "priceBook": "v137",
+  "overrides": {
+    "phSize": {
+      "on": true,
+      "sharePct": 20,
+      "hiringPct": 15,
+      "mode": "fade"
+    }
+  },
+  "input": {
+    "name": "Acme Inc",
+    "years": 1,
+    "users": 2000,
+    "processes": 40,
+    "packs": {
+      "ph_s": true
+    },
+    "setup": {},
+    "yearly": {},
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 0,
+    "reason": ""
+  },
+  "expected": {
+    "users": 2000,
+    "segId": "star",
+    "segMult": 1,
+    "suiteOn": false,
+    "packCount": 1,
+    "notCounted": [],
+    "listSub": 27414.202127659577,
+    "packPct": 0,
+    "packAmt": 0,
+    "engPct": 0,
+    "engAmt": 0,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 27414.202127659577,
+    "totalPct": 0,
+    "additive": true,
+    "rawFactor": 1,
+    "effPct": 0,
+    "subLines": [
+      {
+        "modId": "ph",
+        "packId": "ph_s",
+        "qty": 2000,
+        "unit": 13.70710106382979,
+        "annual": 27414.202127659577,
+        "raw": 27414.202127659577,
+        "perEmp": 13.70710106382979,
+        "net": 27414.202127659577,
+        "hasUsage": true,
+        "usageQty": 40,
+        "usageTot": 15907.712765957447,
+        "sizeTot": 11506.48936170213,
+        "proTot": 0,
+        "platformTot": 0,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "part": "usage",
+            "from": 1,
+            "to": 10,
+            "n": 10,
+            "flat": 5377.127659574468,
+            "amt": 5377.127659574468
+          },
+          {
+            "part": "usage",
+            "from": 11,
+            "to": 20,
+            "n": 10,
+            "r": 387.154255319149,
+            "amt": 3871.54255319149
+          },
+          {
+            "part": "usage",
+            "from": 21,
+            "to": 40,
+            "n": 20,
+            "r": 332.95212765957444,
+            "amt": 6659.04255319149
+          },
+          {
+            "part": "size",
+            "n": 2000,
+            "r": 5.753244680851065,
+            "amt": 11506.48936170213,
+            "label": "Size charge"
+          }
+        ]
+      }
+    ],
+    "yLines": [],
+    "yearlyTot": 0,
+    "oLines": [],
+    "setupGross": 0,
+    "setupDiscPct": 0,
+    "setupDiscAmt": 0,
+    "oneTime": 0,
+    "arr": 27414.202127659577,
+    "mrr": 2284.5168439716313,
+    "year1": 27414.202127659577,
+    "tcv": 27414.202127659577,
+    "perUser": 13.70710106382979
+  }
+}

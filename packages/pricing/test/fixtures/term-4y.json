@@ -1,0 +1,168 @@
+{
+  "name": "term-4y",
+  "description": "4-year term — engagement discount and TCV",
+  "priceBook": "v137",
+  "overrides": {},
+  "input": {
+    "name": "Acme Inc",
+    "years": 4,
+    "users": 600,
+    "processes": 14,
+    "packs": {
+      "ta_1": true,
+      "perf_s": true
+    },
+    "setup": {},
+    "yearly": {},
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 0,
+    "reason": ""
+  },
+  "expected": {
+    "users": 600,
+    "segId": "value",
+    "segMult": 1,
+    "suiteOn": false,
+    "packCount": 2,
+    "notCounted": [],
+    "listSub": 33618,
+    "packPct": 5,
+    "packAmt": 1680.9,
+    "engPct": 13,
+    "engAmt": 4370.34,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 27566.760000000002,
+    "totalPct": 18,
+    "additive": true,
+    "rawFactor": 0.8200000000000001,
+    "effPct": 17.999999999999993,
+    "subLines": [
+      {
+        "modId": "ta",
+        "packId": "ta_1",
+        "qty": 600,
+        "unit": 24.84,
+        "annual": 14904,
+        "raw": 14904.955000000002,
+        "perEmp": 24.84,
+        "net": 12221.28,
+        "hasUsage": false,
+        "usageQty": 0,
+        "usageTot": 0,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 14904.955000000002,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "to": 100,
+            "n": 100,
+            "flat": 3300.33,
+            "amt": 3300.33,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 101,
+            "to": 250,
+            "n": 150,
+            "r": 38.3206,
+            "amt": 5748.09,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 251,
+            "to": 500,
+            "n": 250,
+            "r": 18.9917,
+            "amt": 4747.925,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 501,
+            "to": 1000,
+            "n": 100,
+            "r": 11.0861,
+            "amt": 1108.61,
+            "part": "platform",
+            "unit": "employee"
+          }
+        ]
+      },
+      {
+        "modId": "perf",
+        "packId": "perf_s",
+        "qty": 600,
+        "unit": 31.19,
+        "annual": 18714,
+        "raw": 18711,
+        "perEmp": 31.19,
+        "net": 15345.480000000001,
+        "hasUsage": false,
+        "usageQty": 0,
+        "usageTot": 0,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 18711,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "to": 100,
+            "n": 100,
+            "flat": 5000,
+            "amt": 5000,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 101,
+            "to": 250,
+            "n": 150,
+            "r": 45,
+            "amt": 6750,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 251,
+            "to": 500,
+            "n": 250,
+            "r": 22.3,
+            "amt": 5575,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 501,
+            "to": 1000,
+            "n": 100,
+            "r": 13.86,
+            "amt": 1386,
+            "part": "platform",
+            "unit": "employee"
+          }
+        ]
+      }
+    ],
+    "yLines": [],
+    "yearlyTot": 0,
+    "oLines": [],
+    "setupGross": 0,
+    "setupDiscPct": 0,
+    "setupDiscAmt": 0,
+    "oneTime": 0,
+    "arr": 27566.760000000002,
+    "mrr": 2297.23,
+    "year1": 27566.760000000002,
+    "tcv": 110267.04000000001,
+    "perUser": 45.9446
+  }
+}

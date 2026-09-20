@@ -1,0 +1,84 @@
+{
+  "name": "processes-10-ph-starter",
+  "description": "Predictive hiring Starter at 10 recruitments — graduated bracket walk",
+  "priceBook": "v137",
+  "overrides": {},
+  "input": {
+    "name": "Acme Inc",
+    "years": 1,
+    "users": 600,
+    "processes": 10,
+    "packs": {
+      "ph_s": true
+    },
+    "setup": {},
+    "yearly": {},
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 0,
+    "reason": ""
+  },
+  "expected": {
+    "users": 600,
+    "segId": "value",
+    "segMult": 1,
+    "suiteOn": false,
+    "packCount": 1,
+    "notCounted": [],
+    "listSub": 5377.127659574468,
+    "packPct": 0,
+    "packAmt": 0,
+    "engPct": 0,
+    "engAmt": 0,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 5377.127659574468,
+    "totalPct": 0,
+    "additive": true,
+    "rawFactor": 1,
+    "effPct": 0,
+    "subLines": [
+      {
+        "modId": "ph",
+        "packId": "ph_s",
+        "qty": 600,
+        "unit": 8.961879432624114,
+        "annual": 5377.127659574468,
+        "raw": 5377.127659574468,
+        "perEmp": 8.961879432624114,
+        "net": 5377.127659574468,
+        "hasUsage": true,
+        "usageQty": 10,
+        "usageTot": 5377.127659574468,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 0,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "part": "usage",
+            "from": 1,
+            "to": 10,
+            "n": 10,
+            "flat": 5377.127659574468,
+            "amt": 5377.127659574468
+          }
+        ]
+      }
+    ],
+    "yLines": [],
+    "yearlyTot": 0,
+    "oLines": [],
+    "setupGross": 0,
+    "setupDiscPct": 0,
+    "setupDiscAmt": 0,
+    "oneTime": 0,
+    "arr": 5377.127659574468,
+    "mrr": 448.0939716312057,
+    "year1": 5377.127659574468,
+    "tcv": 5377.127659574468,
+    "perUser": 8.961879432624114
+  }
+}

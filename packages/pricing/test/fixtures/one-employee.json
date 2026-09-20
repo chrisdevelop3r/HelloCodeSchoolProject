@@ -1,0 +1,84 @@
+{
+  "name": "one-employee",
+  "description": "A single employee",
+  "priceBook": "v137",
+  "overrides": {},
+  "input": {
+    "name": "Acme Inc",
+    "years": 1,
+    "users": 1,
+    "processes": 1,
+    "packs": {
+      "ta_1": true
+    },
+    "setup": {},
+    "yearly": {},
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 0,
+    "reason": ""
+  },
+  "expected": {
+    "users": 1,
+    "segId": "small",
+    "segMult": 1,
+    "suiteOn": false,
+    "packCount": 1,
+    "notCounted": [],
+    "listSub": 3300.33,
+    "packPct": 0,
+    "packAmt": 0,
+    "engPct": 0,
+    "engAmt": 0,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 3300.33,
+    "totalPct": 0,
+    "additive": true,
+    "rawFactor": 1,
+    "effPct": 0,
+    "subLines": [
+      {
+        "modId": "ta",
+        "packId": "ta_1",
+        "qty": 1,
+        "unit": 3300.33,
+        "annual": 3300.33,
+        "raw": 3300.33,
+        "perEmp": 3300.33,
+        "net": 3300.33,
+        "hasUsage": false,
+        "usageQty": 0,
+        "usageTot": 0,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 3300.33,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "to": 100,
+            "n": 1,
+            "flat": 3300.33,
+            "amt": 3300.33,
+            "part": "platform",
+            "unit": "employee"
+          }
+        ]
+      }
+    ],
+    "yLines": [],
+    "yearlyTot": 0,
+    "oLines": [],
+    "setupGross": 0,
+    "setupDiscPct": 0,
+    "setupDiscAmt": 0,
+    "oneTime": 0,
+    "arr": 3300.33,
+    "mrr": 275.0275,
+    "year1": 3300.33,
+    "tcv": 3300.33,
+    "perUser": 3300.33
+  }
+}

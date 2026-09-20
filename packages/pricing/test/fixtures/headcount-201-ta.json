@@ -1,0 +1,93 @@
+{
+  "name": "headcount-201-ta",
+  "description": "Talent assessment alone at 201 employees — segment bracket and band ladder",
+  "priceBook": "v137",
+  "overrides": {},
+  "input": {
+    "name": "Acme Inc",
+    "years": 1,
+    "users": 201,
+    "processes": 14,
+    "packs": {
+      "ta_1": true
+    },
+    "setup": {},
+    "yearly": {},
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 0,
+    "reason": ""
+  },
+  "expected": {
+    "users": 201,
+    "segId": "value",
+    "segMult": 1,
+    "suiteOn": false,
+    "packCount": 1,
+    "notCounted": [],
+    "listSub": 7171.68,
+    "packPct": 0,
+    "packAmt": 0,
+    "engPct": 0,
+    "engAmt": 0,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 7171.68,
+    "totalPct": 0,
+    "additive": true,
+    "rawFactor": 1,
+    "effPct": 0,
+    "subLines": [
+      {
+        "modId": "ta",
+        "packId": "ta_1",
+        "qty": 201,
+        "unit": 35.68,
+        "annual": 7171.68,
+        "raw": 7170.7106,
+        "perEmp": 35.68,
+        "net": 7171.68,
+        "hasUsage": false,
+        "usageQty": 0,
+        "usageTot": 0,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 7170.7106,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "to": 100,
+            "n": 100,
+            "flat": 3300.33,
+            "amt": 3300.33,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 101,
+            "to": 250,
+            "n": 101,
+            "r": 38.3206,
+            "amt": 3870.3806,
+            "part": "platform",
+            "unit": "employee"
+          }
+        ]
+      }
+    ],
+    "yLines": [],
+    "yearlyTot": 0,
+    "oLines": [],
+    "setupGross": 0,
+    "setupDiscPct": 0,
+    "setupDiscAmt": 0,
+    "oneTime": 0,
+    "arr": 7171.68,
+    "mrr": 597.64,
+    "year1": 7171.68,
+    "tcv": 7171.68,
+    "perUser": 35.68
+  }
+}

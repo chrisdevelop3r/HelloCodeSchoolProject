@@ -1,1 +1,6 @@
 node_modules/
+index_test.js
+dist/
+.turbo/
+*.tsbuildinfo
+coverage/

@@ -1,0 +1,93 @@
+{
+  "name": "headcount-200-ta",
+  "description": "Talent assessment alone at 200 employees — segment bracket and band ladder",
+  "priceBook": "v137",
+  "overrides": {},
+  "input": {
+    "name": "Acme Inc",
+    "years": 1,
+    "users": 200,
+    "processes": 14,
+    "packs": {
+      "ta_1": true
+    },
+    "setup": {},
+    "yearly": {},
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 0,
+    "reason": ""
+  },
+  "expected": {
+    "users": 200,
+    "segId": "small",
+    "segMult": 1,
+    "suiteOn": false,
+    "packCount": 1,
+    "notCounted": [],
+    "listSub": 7131.999999999999,
+    "packPct": 0,
+    "packAmt": 0,
+    "engPct": 0,
+    "engAmt": 0,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 7131.999999999999,
+    "totalPct": 0,
+    "additive": true,
+    "rawFactor": 1,
+    "effPct": 0,
+    "subLines": [
+      {
+        "modId": "ta",
+        "packId": "ta_1",
+        "qty": 200,
+        "unit": 35.66,
+        "annual": 7131.999999999999,
+        "raw": 7132.389999999999,
+        "perEmp": 35.66,
+        "net": 7131.999999999999,
+        "hasUsage": false,
+        "usageQty": 0,
+        "usageTot": 0,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 7132.389999999999,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "to": 100,
+            "n": 100,
+            "flat": 3300.33,
+            "amt": 3300.33,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 101,
+            "to": 250,
+            "n": 100,
+            "r": 38.3206,
+            "amt": 3832.06,
+            "part": "platform",
+            "unit": "employee"
+          }
+        ]
+      }
+    ],
+    "yLines": [],
+    "yearlyTot": 0,
+    "oLines": [],
+    "setupGross": 0,
+    "setupDiscPct": 0,
+    "setupDiscAmt": 0,
+    "oneTime": 0,
+    "arr": 7131.999999999999,
+    "mrr": 594.3333333333333,
+    "year1": 7131.999999999999,
+    "tcv": 7131.999999999999,
+    "perUser": 35.66
+  }
+}

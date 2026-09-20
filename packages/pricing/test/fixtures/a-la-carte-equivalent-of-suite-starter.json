@@ -1,0 +1,377 @@
+{
+  "name": "a-la-carte-equivalent-of-suite-starter",
+  "description": "The suite members bought separately",
+  "priceBook": "v137",
+  "overrides": {},
+  "input": {
+    "name": "Acme Inc",
+    "years": 1,
+    "users": 600,
+    "processes": 14,
+    "packs": {
+      "ph_s": true,
+      "ta_1": true,
+      "perf_s": true,
+      "dev_st": true,
+      "eng_s": true,
+      "comp_s": true
+    },
+    "setup": {},
+    "yearly": {},
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 0,
+    "reason": ""
+  },
+  "expected": {
+    "users": 600,
+    "segId": "value",
+    "segMult": 1,
+    "suiteOn": false,
+    "packCount": 6,
+    "notCounted": [],
+    "listSub": 61267.70921985815,
+    "packPct": 20,
+    "packAmt": 12253.54184397163,
+    "engPct": 0,
+    "engAmt": 0,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 49014.16737588653,
+    "totalPct": 20,
+    "additive": true,
+    "rawFactor": 0.8,
+    "effPct": 19.999999999999986,
+    "subLines": [
+      {
+        "modId": "ph",
+        "packId": "ph_s",
+        "qty": 600,
+        "unit": 11.542848699763594,
+        "annual": 6925.709219858157,
+        "raw": 6925.709219858157,
+        "perEmp": 11.542848699763594,
+        "net": 5540.567375886526,
+        "hasUsage": true,
+        "usageQty": 14,
+        "usageTot": 6925.709219858157,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 0,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "part": "usage",
+            "from": 1,
+            "to": 10,
+            "n": 10,
+            "flat": 5377.127659574468,
+            "amt": 5377.127659574468
+          },
+          {
+            "part": "usage",
+            "from": 11,
+            "to": 20,
+            "n": 4,
+            "r": 387.154255319149,
+            "amt": 1548.617021276596
+          }
+        ]
+      },
+      {
+        "modId": "ta",
+        "packId": "ta_1",
+        "qty": 600,
+        "unit": 24.84,
+        "annual": 14904,
+        "raw": 14904.955000000002,
+        "perEmp": 24.84,
+        "net": 11923.2,
+        "hasUsage": false,
+        "usageQty": 0,
+        "usageTot": 0,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 14904.955000000002,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "to": 100,
+            "n": 100,
+            "flat": 3300.33,
+            "amt": 3300.33,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 101,
+            "to": 250,
+            "n": 150,
+            "r": 38.3206,
+            "amt": 5748.09,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 251,
+            "to": 500,
+            "n": 250,
+            "r": 18.9917,
+            "amt": 4747.925,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 501,
+            "to": 1000,
+            "n": 100,
+            "r": 11.0861,
+            "amt": 1108.61,
+            "part": "platform",
+            "unit": "employee"
+          }
+        ]
+      },
+      {
+        "modId": "perf",
+        "packId": "perf_s",
+        "qty": 600,
+        "unit": 31.19,
+        "annual": 18714,
+        "raw": 18711,
+        "perEmp": 31.19,
+        "net": 14971.2,
+        "hasUsage": false,
+        "usageQty": 0,
+        "usageTot": 0,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 18711,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "to": 100,
+            "n": 100,
+            "flat": 5000,
+            "amt": 5000,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 101,
+            "to": 250,
+            "n": 150,
+            "r": 45,
+            "amt": 6750,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 251,
+            "to": 500,
+            "n": 250,
+            "r": 22.3,
+            "amt": 5575,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 501,
+            "to": 1000,
+            "n": 100,
+            "r": 13.86,
+            "amt": 1386,
+            "part": "platform",
+            "unit": "employee"
+          }
+        ]
+      },
+      {
+        "modId": "dev",
+        "packId": "dev_st",
+        "qty": 600,
+        "unit": 20.27,
+        "annual": 12162,
+        "raw": 12162.155,
+        "perEmp": 20.27,
+        "net": 9729.6,
+        "hasUsage": false,
+        "usageQty": 0,
+        "usageTot": 0,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 12162.155,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "to": 100,
+            "n": 100,
+            "flat": 1500,
+            "amt": 1500,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 101,
+            "to": 250,
+            "n": 150,
+            "r": 40.9167,
+            "amt": 6137.505,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 251,
+            "to": 500,
+            "n": 250,
+            "r": 14.495,
+            "amt": 3623.75,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 501,
+            "to": 1000,
+            "n": 100,
+            "r": 9.009,
+            "amt": 900.9000000000001,
+            "part": "platform",
+            "unit": "employee"
+          }
+        ]
+      },
+      {
+        "modId": "eng",
+        "packId": "eng_s",
+        "qty": 600,
+        "unit": 2.49,
+        "annual": 1494.0000000000002,
+        "raw": 1496.88,
+        "perEmp": 2.49,
+        "net": 1195.2000000000003,
+        "hasUsage": false,
+        "usageQty": 0,
+        "usageTot": 0,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 1496.88,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "to": 100,
+            "n": 100,
+            "flat": 400,
+            "amt": 400,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 101,
+            "to": 250,
+            "n": 150,
+            "r": 3.6,
+            "amt": 540,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 251,
+            "to": 500,
+            "n": 250,
+            "r": 1.784,
+            "amt": 446,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 501,
+            "to": 1000,
+            "n": 100,
+            "r": 1.1088,
+            "amt": 110.88,
+            "part": "platform",
+            "unit": "employee"
+          }
+        ]
+      },
+      {
+        "modId": "comp",
+        "packId": "comp_s",
+        "qty": 600,
+        "unit": 11.78,
+        "annual": 7068,
+        "raw": 7068.6,
+        "perEmp": 11.78,
+        "net": 5654.400000000001,
+        "hasUsage": false,
+        "usageQty": 0,
+        "usageTot": 0,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 7068.6,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "to": 100,
+            "n": 100,
+            "flat": 1750,
+            "amt": 1750,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 101,
+            "to": 250,
+            "n": 150,
+            "r": 15.75,
+            "amt": 2362.5,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 251,
+            "to": 500,
+            "n": 250,
+            "r": 9.191,
+            "amt": 2297.75,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 501,
+            "to": 1000,
+            "n": 100,
+            "r": 6.5835,
+            "amt": 658.35,
+            "part": "platform",
+            "unit": "employee"
+          }
+        ]
+      }
+    ],
+    "yLines": [],
+    "yearlyTot": 0,
+    "oLines": [],
+    "setupGross": 0,
+    "setupDiscPct": 0,
+    "setupDiscAmt": 0,
+    "oneTime": 0,
+    "arr": 49014.16737588653,
+    "mrr": 4084.5139479905442,
+    "year1": 49014.16737588653,
+    "tcv": 49014.16737588653,
+    "perUser": 81.69027895981088
+  }
+}

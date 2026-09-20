@@ -1,0 +1,156 @@
+{
+  "name": "processes-2561-ph-starter",
+  "description": "Predictive hiring Starter at 2561 recruitments — graduated bracket walk",
+  "priceBook": "v137",
+  "overrides": {},
+  "input": {
+    "name": "Acme Inc",
+    "years": 1,
+    "users": 600,
+    "processes": 2561,
+    "packs": {
+      "ph_s": true
+    },
+    "setup": {},
+    "yearly": {},
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 0,
+    "reason": ""
+  },
+  "expected": {
+    "users": 600,
+    "segId": "value",
+    "segMult": 1,
+    "suiteOn": false,
+    "packCount": 1,
+    "notCounted": [],
+    "listSub": 412021.54255319154,
+    "packPct": 0,
+    "packAmt": 0,
+    "engPct": 0,
+    "engAmt": 0,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 412021.54255319154,
+    "totalPct": 0,
+    "additive": true,
+    "rawFactor": 1,
+    "effPct": 0,
+    "subLines": [
+      {
+        "modId": "ph",
+        "packId": "ph_s",
+        "qty": 600,
+        "unit": 686.7025709219859,
+        "annual": 412021.54255319154,
+        "raw": 412021.54255319154,
+        "perEmp": 686.7025709219859,
+        "net": 412021.54255319154,
+        "hasUsage": true,
+        "usageQty": 2561,
+        "usageTot": 412021.54255319154,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 0,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "part": "usage",
+            "from": 1,
+            "to": 10,
+            "n": 10,
+            "flat": 5377.127659574468,
+            "amt": 5377.127659574468
+          },
+          {
+            "part": "usage",
+            "from": 11,
+            "to": 20,
+            "n": 10,
+            "r": 387.154255319149,
+            "amt": 3871.54255319149
+          },
+          {
+            "part": "usage",
+            "from": 21,
+            "to": 40,
+            "n": 20,
+            "r": 332.95212765957444,
+            "amt": 6659.04255319149
+          },
+          {
+            "part": "usage",
+            "from": 41,
+            "to": 80,
+            "n": 40,
+            "r": 286.33865248226954,
+            "amt": 11453.546099290781
+          },
+          {
+            "part": "usage",
+            "from": 81,
+            "to": 160,
+            "n": 80,
+            "r": 246.25110815602838,
+            "amt": 19700.08865248227
+          },
+          {
+            "part": "usage",
+            "from": 161,
+            "to": 320,
+            "n": 160,
+            "r": 211.775820035461,
+            "amt": 33884.13120567376
+          },
+          {
+            "part": "usage",
+            "from": 321,
+            "to": 640,
+            "n": 320,
+            "r": 182.12738253546098,
+            "amt": 58280.76241134752
+          },
+          {
+            "part": "usage",
+            "from": 641,
+            "to": 1280,
+            "n": 640,
+            "r": 156.62940492021278,
+            "amt": 100242.81914893618
+          },
+          {
+            "part": "usage",
+            "from": 1281,
+            "to": 2560,
+            "n": 1280,
+            "r": 134.7014212101064,
+            "amt": 172417.8191489362
+          },
+          {
+            "part": "usage",
+            "from": 2561,
+            "to": null,
+            "n": 1,
+            "r": 134.7014212101064,
+            "amt": 134.7014212101064
+          }
+        ]
+      }
+    ],
+    "yLines": [],
+    "yearlyTot": 0,
+    "oLines": [],
+    "setupGross": 0,
+    "setupDiscPct": 0,
+    "setupDiscAmt": 0,
+    "oneTime": 0,
+    "arr": 412021.54255319154,
+    "mrr": 34335.128546099295,
+    "year1": 412021.54255319154,
+    "tcv": 412021.54255319154,
+    "perUser": 686.7025709219859
+  }
+}

@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Pricing engine
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Install Chromium
+        run: pnpm exec playwright install --with-deps chromium
+
+      # Re-runs every scenario through the prototype and compares. A fixture
+      # edited by hand, or a price book that has drifted from v137, fails here.
+      - name: Fixtures still match the prototype
+        run: pnpm capture:check
+
+      - run: pnpm typecheck
+
+      # Includes the coverage gate on packages/pricing.
+      - run: pnpm test
+
+      # A green suite proves nothing until it has been shown to go red.
+      - name: The suite discriminates
+        run: pnpm mutants

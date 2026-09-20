@@ -1,0 +1,153 @@
+{
+  "name": "threshold-fee-on-the-line",
+  "description": "Exactly at the threshold — v137 reads it as the high price",
+  "priceBook": "v137",
+  "overrides": {
+    "setup": [
+      {
+        "id": "onb_std",
+        "name": "Onboarding & implementation",
+        "price": 3500,
+        "threshold": 1000,
+        "priceHigh": 9000,
+        "group": "Getting started"
+      }
+    ],
+    "yearly": [
+      {
+        "id": "support",
+        "name": "Premium support",
+        "price": 3000,
+        "threshold": 1000,
+        "priceHigh": 7500
+      }
+    ]
+  },
+  "input": {
+    "name": "Acme Inc",
+    "years": 1,
+    "users": 1000,
+    "processes": 14,
+    "packs": {
+      "ta_1": true
+    },
+    "setup": {
+      "onb_std": true
+    },
+    "yearly": {
+      "support": true
+    },
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 0,
+    "reason": ""
+  },
+  "expected": {
+    "users": 1000,
+    "segId": "value",
+    "segMult": 1,
+    "suiteOn": false,
+    "packCount": 1,
+    "notCounted": [],
+    "listSub": 19340,
+    "packPct": 0,
+    "packAmt": 0,
+    "engPct": 0,
+    "engAmt": 0,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 19340,
+    "totalPct": 0,
+    "additive": true,
+    "rawFactor": 1,
+    "effPct": 0,
+    "subLines": [
+      {
+        "modId": "ta",
+        "packId": "ta_1",
+        "qty": 1000,
+        "unit": 19.34,
+        "annual": 19340,
+        "raw": 19339.395,
+        "perEmp": 19.34,
+        "net": 19340,
+        "hasUsage": false,
+        "usageQty": 0,
+        "usageTot": 0,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 19339.395,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "to": 100,
+            "n": 100,
+            "flat": 3300.33,
+            "amt": 3300.33,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 101,
+            "to": 250,
+            "n": 150,
+            "r": 38.3206,
+            "amt": 5748.09,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 251,
+            "to": 500,
+            "n": 250,
+            "r": 18.9917,
+            "amt": 4747.925,
+            "part": "platform",
+            "unit": "employee"
+          },
+          {
+            "from": 501,
+            "to": 1000,
+            "n": 500,
+            "r": 11.0861,
+            "amt": 5543.05,
+            "part": "platform",
+            "unit": "employee"
+          }
+        ]
+      }
+    ],
+    "yLines": [
+      {
+        "name": "Premium support",
+        "amt": 7500,
+        "note": "≥ 1000 users",
+        "auto": false,
+        "qty": null,
+        "unitPrice": 3000
+      }
+    ],
+    "yearlyTot": 7500,
+    "oLines": [
+      {
+        "name": "Onboarding & implementation",
+        "amt": 9000,
+        "note": "≥ 1000 users",
+        "unit": null,
+        "qty": null,
+        "unitPrice": 3500
+      }
+    ],
+    "setupGross": 9000,
+    "setupDiscPct": 0,
+    "setupDiscAmt": 0,
+    "oneTime": 9000,
+    "arr": 26840,
+    "mrr": 2236.6666666666665,
+    "year1": 35840,
+    "tcv": 35840,
+    "perUser": 26.84
+  }
+}

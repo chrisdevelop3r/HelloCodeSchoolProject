@@ -1,0 +1,92 @@
+{
+  "name": "processes-20-ph-starter",
+  "description": "Predictive hiring Starter at 20 recruitments — graduated bracket walk",
+  "priceBook": "v137",
+  "overrides": {},
+  "input": {
+    "name": "Acme Inc",
+    "years": 1,
+    "users": 600,
+    "processes": 20,
+    "packs": {
+      "ph_s": true
+    },
+    "setup": {},
+    "yearly": {},
+    "ai": {},
+    "disc": 0,
+    "setupDisc": 0,
+    "reason": ""
+  },
+  "expected": {
+    "users": 600,
+    "segId": "value",
+    "segMult": 1,
+    "suiteOn": false,
+    "packCount": 1,
+    "notCounted": [],
+    "listSub": 9248.670212765957,
+    "packPct": 0,
+    "packAmt": 0,
+    "engPct": 0,
+    "engAmt": 0,
+    "discPct": 0,
+    "discAmt": 0,
+    "netSub": 9248.670212765957,
+    "totalPct": 0,
+    "additive": true,
+    "rawFactor": 1,
+    "effPct": 0,
+    "subLines": [
+      {
+        "modId": "ph",
+        "packId": "ph_s",
+        "qty": 600,
+        "unit": 15.41445035460993,
+        "annual": 9248.670212765957,
+        "raw": 9248.670212765957,
+        "perEmp": 15.41445035460993,
+        "net": 9248.670212765957,
+        "hasUsage": true,
+        "usageQty": 20,
+        "usageTot": 9248.670212765957,
+        "sizeTot": 0,
+        "proTot": 0,
+        "platformTot": 0,
+        "suiteParts": null,
+        "suiteDisc": null,
+        "suiteBonus": null,
+        "legs": [
+          {
+            "part": "usage",
+            "from": 1,
+            "to": 10,
+            "n": 10,
+            "flat": 5377.127659574468,
+            "amt": 5377.127659574468
+          },
+          {
+            "part": "usage",
+            "from": 11,
+            "to": 20,
+            "n": 10,
+            "r": 387.154255319149,
+            "amt": 3871.54255319149
+          }
+        ]
+      }
+    ],
+    "yLines": [],
+    "yearlyTot": 0,
+    "oLines": [],
+    "setupGross": 0,
+    "setupDiscPct": 0,
+    "setupDiscAmt": 0,
+    "oneTime": 0,
+    "arr": 9248.670212765957,
+    "mrr": 770.7225177304964,
+    "year1": 9248.670212765957,
+    "tcv": 9248.670212765957,
+    "perUser": 15.41445035460993
+  }
+}
