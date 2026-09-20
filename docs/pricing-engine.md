@@ -105,7 +105,4 @@ Two documents cover what was built on top of the engine:
 - **Money as integer minor units** with a documented rounding point, so a quote
   cannot disagree with the Zuora invoice by an öre. This will change numbers, so
   it needs a decision recorded before it needs a commit.
-- **Zod schemas**, so a price book is validated before it can price anything.
-  `test/defensive.test.ts` pins down what happens today when a malformed one
-  gets through.
 - **Phase 2, the builder UI.**

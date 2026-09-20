@@ -46,6 +46,12 @@ const MUTANTS = [
   ['one charge may be mapped to two Zuora charges', 'src/catalog.ts', 'if (seen.has(m.key)) throw new Error(`The mapping CSV maps ${m.key} twice.`);', 'void 0;'],
   ['CSV fields are never quoted', 'src/csv.ts', 'NEEDS_QUOTING.test(f) ? `"${f.replace(/"/g, \'""\')}"` : f', 'f'],
   ['a doubled quote ends a CSV field', 'src/csv.ts', "} else if (text[i + 1] === '\"') {", '} else if (false) {'],
+  ['validation hands back zod\'s rebuilt copy instead of the book', 'src/schema.ts', 'return value as PriceBook;', 'return result.data as PriceBook;'],
+  ['a pack needs no way of being priced', 'src/schema.ts', '.refine((p) => p.bands !== undefined || p.bandModel === true || p.suiteOf !== undefined, {', '.refine(() => true, {'],
+  ['a band may be both a flat fee and a rate', 'src/schema.ts', '.refine((b) => (b.flat === undefined) !== (b.rate === undefined), {', '.refine(() => true, {'],
+  ['the euro rate need not be one', 'src/schema.ts', ".refine((fx) => fx['EUR']?.rate === 1, {", '.refine(() => true, {'],
+  ['a suite may name packs that do not exist', 'src/schema.ts', 'if (!packIds.has(member)) {', 'if (false) {'],
+  ['a version is built without validating its book', 'src/version.ts', 'parsePriceBook(book);', 'void 0;'],
 ];
 
 const suitePasses = () => {

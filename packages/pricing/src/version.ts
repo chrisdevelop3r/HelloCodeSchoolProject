@@ -21,6 +21,7 @@
  *   still re-render a quote that was issued from one before it was withdrawn.
  */
 import { fingerprint } from './fingerprint.js';
+import { parsePriceBook } from './schema.js';
 import type { PriceBook } from './types.js';
 
 export type PriceBookStatus =
@@ -87,6 +88,11 @@ export function createVersion(meta: PriceBookVersionInput, book: PriceBook): Pri
     throw new Error(`${meta.id}: a published version must record when it was published.`);
   }
   if (meta.publishedAt) time(meta.publishedAt, `${meta.id}.publishedAt`);
+
+  // The engine will price anything it is handed, filling in defaults for what
+  // is missing. That is right for a pure function and wrong for the front door,
+  // so a book that cannot price correctly never becomes a version.
+  parsePriceBook(book);
 
   // Every version is frozen, drafts included: a book you can still edit would
   // carry a fingerprint that quietly stops describing it. A draft is revised by

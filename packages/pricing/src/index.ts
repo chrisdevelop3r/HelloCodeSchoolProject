@@ -10,6 +10,7 @@ export {
 export { parseCsv, parseCsvRecords, toCsv } from './csv.js';
 export { canonicalJson, fingerprint } from './fingerprint.js';
 export { divergences, issueQuote, rerenderQuote } from './issue.js';
+export { isPriceBook, parsePriceBook, PriceBookInvalid } from './schema.js';
 export { createVersion, PriceBookRegistry } from './version.js';
 export {
   bandTotal,

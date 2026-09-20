@@ -42,6 +42,39 @@ and `PriceBookRegistry` refuses it when it is built rather than letting a rep
 discover it as a wrong price. Drafts and archived versions are exempt, which is
 what lets a replacement be prepared while the current book is still selling.
 
+## Validation
+
+`createVersion` validates the book first, so a book that cannot price correctly
+never becomes a version anyone can quote from.
+
+The engine itself stays permissive on purpose — it is a pure function and it
+will price whatever it is handed, filling in defaults for anything absent
+(`test/defensive.test.ts` pins down exactly what it does). That is the right
+behaviour for the engine and the wrong behaviour for the front door, because a
+book missing a rate prices silently rather than loudly. So validation guards the
+door and the engine stays simple.
+
+Every rule is one that would otherwise produce a wrong number rather than an
+error:
+
+| Refused | Because |
+|---|---|
+| a pack with no `bands`, `bandModel` or `suiteOf` | it prices at zero and says nothing |
+| a band that is both a flat fee and a rate, or neither | the ladder charges the wrong one |
+| `phBands.bands` that do not strictly increase | the bracket rates divide by the gap between bands |
+| a `threshold` fee with no `priceHigh` | crossing the threshold charges `undefined` |
+| a suite naming a pack the book does not have | the engine skips it, so the suite quietly costs less |
+| a fee needing a module the book does not have | it can never be sold |
+| two packs or two modules sharing an id | the wrong one is found |
+| `fx.EUR` missing or not exactly `1` | every amount is already in euros, so anything else re-denominates |
+| `fx.SEK` missing or zero | the predictive-hiring ladder is listed in SEK and divided by it |
+
+**Validation hands back the object it was given, never Zod's rebuilt copy.**
+The fingerprint is taken over the book, so returning a copy — with unknown
+fields stripped — would silently change what a quote was priced from. Validation
+answers a question; it does not get to edit the answer. There is a mutation test
+for exactly that.
+
 ## Issuing and re-rendering
 
 ```ts
